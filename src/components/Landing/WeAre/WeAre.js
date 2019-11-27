@@ -3,12 +3,14 @@ import { WeAreStyled, HeadingStyled } from "./styles/Styled";
 
 const WeAre = () => (
   <WeAreStyled>
-
-        We are <small>#1</small>
+    <span>
+      We are <small>#1</small>
+    </span>
     <HeadingStyled
       rank={2}
-      text="The most popular streaming TV service in the region."
-      size="medium"
+      text="The most popular streaming TV service in the region.<small>Source: IHS Markit Survey</small>"
+      size="large"
+      type="secondary"
       ariaLabelledby="The most popular streaming TV service in the region."
     />
   </WeAreStyled>
