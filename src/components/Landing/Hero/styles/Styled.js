@@ -7,7 +7,9 @@ export const HeroStyled = styled.section`
   min-height: 60vh;
   text-align: center;
   background: ${props =>
-    `url(${props.background}${!!props.responsive ? "" : "-xs"}.jpg)`} 0 100% / cover no-repeat ${props => props.theme.color.greyBlack};
+    `url(${props.background}${
+      !!props.responsive ? "" : "-xs"
+    }.jpg)`} 0 100% / cover no-repeat ${props => props.theme.color.greyBlack};
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -16,7 +18,8 @@ export const HeroStyled = styled.section`
   padding: 0 ${props => props.theme.spacing.medium};
   content: "${props => props.backgroundLocale}";  
   &::after {
-    ${props => shadowStyled("bottom", "0", "100%", props.theme.color.blackRGB, 1, props.theme.zIndex.low)};
+    ${props =>
+      shadowStyled("bottom", "0", "100%", props.theme.color.blackRGB, 1)};
   }
   /* Media queries */
   ${media.medium`
