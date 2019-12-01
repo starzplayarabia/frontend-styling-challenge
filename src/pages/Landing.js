@@ -26,6 +26,7 @@ const Landing = () => {
         <Hero
           background={"/images/starzplay_covers"}
           heroTitle="Imagine the best entertainment all in one place"
+          icon={"languageGlobe"}
           size={"largest"}
         />
         <WeAre />
@@ -43,7 +44,7 @@ const Landing = () => {
         <Promo
           background={"/images/promo2"}
           backgroundLocale={true}
-          text="Get thousands of titles in your pocket"
+          text="Get <strong>thousands</strong> of titles in your pocket"
           direction="start"
         />
         <Tabs layout={tabsLayout()} />

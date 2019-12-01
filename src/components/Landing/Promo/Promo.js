@@ -23,7 +23,13 @@ const Promo = ({
       direction={direction}
       fileExtension={fileExtension}
     >
-      <HeadingStyled rank={3} text={text} size={size} ariaLabelledby={text} />
+      <HeadingStyled
+        rank={3}
+        text={text}
+        size={size}
+        ariaLabelledby={text}
+        direction={direction}
+      />
       {children}
     </PromoStyled>
   </>

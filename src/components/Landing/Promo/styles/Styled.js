@@ -64,6 +64,7 @@ export const HeadingTitleStyled = styled(Heading)`
 
 export const HeadingStyled = styled(Heading)`
   max-width: 12rem;
+  text-align: ${props => (props.direction === "end" ? "center" : "left")};
   &&& {
     font-weight: ${props => props.theme.font.weight.light};
     font-size: ${props => !props.size && props.theme.font.size.xlarge};
