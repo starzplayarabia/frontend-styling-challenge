@@ -17,7 +17,7 @@ export const ButtonStyled = styled(Button)`
   /* Media queries */
   ${media.large`
     margin: ${props => props.theme.spacing.small};
-  `};
+  `}
 `;
 
 export const HeadingStyled = styled(Heading)`

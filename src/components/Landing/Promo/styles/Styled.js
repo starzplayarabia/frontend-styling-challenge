@@ -38,9 +38,10 @@ export const PromoStyled = styled.article`
         ? "20% 100%"
         : "60% 100%"};
     padding: ${props => props.theme.spacing.xlarge};
-  `} ${media.xlarge`
+  `}
+  ${media.xlarge`
     min-height: 50vh;
-  `};
+  `}
 `;
 
 export const HeadingTitleStyled = styled(Heading)`
@@ -75,11 +76,11 @@ export const HeadingStyled = styled(Heading)`
       font-size: ${props => !props.size && props.theme.font.size.largest};
     }
     max-width: 22rem;
-  `};
+  `}
   ${media.xlarge`
     &&& {
       font-size: ${props => !props.size && props.theme.font.size.largest};
     }
     max-width: 20rem;
-  `};
+  `}
 `;

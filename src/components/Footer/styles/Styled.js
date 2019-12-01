@@ -21,7 +21,7 @@ export const LogoStyled = styled(Logo)`
   ${media.medium`
     width: 100px;
     height: 14px;
-  `};
+  `}
 `;
 
 export const AppLogosStyled = styled(AppLogos)`

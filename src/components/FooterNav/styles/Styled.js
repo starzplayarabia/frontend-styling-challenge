@@ -16,7 +16,7 @@ export const HeadingStyled = styled(Heading)`
     &&& {
       font-weight: ${props => props.theme.font.weight.light};
     }
-  `};
+  `}
 `;
 
 export const FooterNavStyled = styled.div`
