@@ -31,6 +31,38 @@ export const HeroStyled = styled.section`
 
 export const HeadingStyled = styled(Heading)`
   z-index: ${props => props.theme.zIndex.base};
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    margin-left: -1rem;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 2rem;
+    border-style: solid;
+    border-color: ${props => props.theme.color.secondary};
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+  }
+  &:after {
+    content: "";
+    margin: 0 auto 0.5em auto;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 2rem;
+    border-style: solid;
+    border-color: ${props => props.theme.color.secondary};
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+  }
   user-select: none;
   /* Media queries */
   ${media.large`
