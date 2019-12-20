@@ -82,7 +82,10 @@ ignore it even if it appears in the docs.
     
 ### Process
 
-- The final deliverable should be one or more pull requests in the repository.
+- The final deliverable should be one of these:
+    - A zip file with your results.
+    - (Preferred but won't negatively evaluate if not done this way) A link to a git repo with one or more pull requests
+    in the repository.
 - If you have any questions, let us know, we'd be happy to help you as you need.
 
 ### Tools used in the challenge
