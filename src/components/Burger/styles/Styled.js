@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../../styles/media";
 
 const SIZE = "24px";
 
@@ -11,6 +12,7 @@ export const BurgerStyled = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+
   div {
     width: ${SIZE};
     height: 1.7px;
@@ -22,7 +24,8 @@ export const BurgerStyled = styled.button`
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ isOpened }) => (isOpened ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ isOpened }) =>
+        isOpened ? "rotate(45deg)" : "rotate(0)"};
     }
 
     :nth-child(2) {
@@ -30,7 +33,12 @@ export const BurgerStyled = styled.button`
     }
 
     :nth-child(3) {
-      transform: ${({ isOpened }) => (isOpened ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ isOpened }) =>
+        isOpened ? "rotate(-45deg)" : "rotate(0)"};
     }
   }
+  /* Media queries */
+  ${media.xlarge`
+    display: none;
+  `}
 `;

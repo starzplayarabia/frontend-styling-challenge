@@ -1,5 +1,9 @@
 import React from "react";
-import { PromoStyled, HeadingTitleStyled, HeadingStyled } from "./styles/Styled";
+import {
+  PromoStyled,
+  HeadingTitleStyled,
+  HeadingStyled
+} from "./styles/Styled";
 
 const Promo = ({
   title,
@@ -7,7 +11,6 @@ const Promo = ({
   children,
   background = false,
   backgroundSize,
-  responsive = true,
   direction,
   size,
   fileExtension
@@ -17,11 +20,16 @@ const Promo = ({
     <PromoStyled
       background={background}
       backgroundSize={backgroundSize}
-      responsive={responsive}
       direction={direction}
       fileExtension={fileExtension}
     >
-      <HeadingStyled rank={3} text={text} size={size} ariaLabelledby={text} />
+      <HeadingStyled
+        rank={3}
+        text={text}
+        size={size}
+        ariaLabelledby={text}
+        direction={direction}
+      />
       {children}
     </PromoStyled>
   </>

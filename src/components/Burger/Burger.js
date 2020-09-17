@@ -3,7 +3,12 @@ import { BurgerStyled } from "./styles/Styled";
 
 const Burger = ({ className, isOpened, onClick, ariaLabel }) => {
   return (
-    <BurgerStyled className={className} isOpened={isOpened} onClick={onClick} aria-label={ariaLabel}>
+    <BurgerStyled
+      className={className}
+      isOpened={isOpened}
+      onClick={onClick}
+      aria-label={ariaLabel}
+    >
       <div />
       <div />
       <div />

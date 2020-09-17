@@ -1,10 +1,21 @@
 import React from "react";
-import { ButtonStyled, HeadingStyled } from "./styles/Styled";
+import {
+  ButtonStyled,
+  HeadingStyled,
+  StickyBannerStyled
+} from "./styles/Styled";
 
 function StickyBanner({ className, title }) {
   return (
-    <div className={className}>
-      {title && <HeadingStyled rank={5} text={title} size="default" ariaLabelledby={title} />}
+    <StickyBannerStyled className={className}>
+      {title && (
+        <HeadingStyled
+          rank={5}
+          text={title}
+          size="default"
+          ariaLabelledby={title}
+        />
+      )}
       <ButtonStyled
         label="Email"
         icon="email"
@@ -24,7 +35,7 @@ function StickyBanner({ className, title }) {
         backgroundColor={"#4760a0"}
         ariaLabel="Facebook"
       />
-    </div>
+    </StickyBannerStyled>
   );
 }
 

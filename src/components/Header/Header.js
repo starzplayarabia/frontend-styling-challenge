@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Dropdown } from "../Dropdown";
 import Menu from "../Menu";
-import { HeaderStyled, BurgerStyled } from "./styles/Styled";
-import logo from "./images/starzplay_en.svg";
+import { Logo } from "../Logo";
+import { HeaderStyled, BurgerStyled, ListStyled } from "./styles/Styled";
 
 function getLanguageSelectorItems() {
   return [
@@ -34,23 +34,36 @@ function Header() {
 
   return (
     <HeaderStyled>
-      <BurgerStyled isOpened={isBurgerMenuOpen} onClick={handleOpened} ariaLabel="Menu" />
+      <BurgerStyled
+        isOpened={isBurgerMenuOpen}
+        onClick={handleOpened}
+        ariaLabel="Menu"
+      />
       <Menu isOpened={isBurgerMenuOpen} />
-      <img src={logo} alt="Brilliant TV. Every time." />
-      <ul>
-        <a href="" role={"link"}>
-          Explore
-        </a>
-        <a href="" role={"link"}>
-          Login
-        </a>
+      <Logo />
+      <nav>
+        <ListStyled
+          data={{
+            explore: {
+              text: "Explore",
+              url: "#",
+              role: "link"
+            },
+            login: {
+              text: "Login",
+              url: "#",
+              role: "link"
+            }
+          }}
+          link
+        />
         <Dropdown
           items={getLanguageSelectorItems()}
           icon={"languageGlobe"}
           optionsPosition={"center"}
           selectedItem={0}
         />
-      </ul>
+      </nav>
     </HeaderStyled>
   );
 }

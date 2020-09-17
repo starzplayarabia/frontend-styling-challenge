@@ -5,12 +5,12 @@ import imgAppleStore from "./images/storeApple.svg";
 
 const LINK_REL = "noopener";
 
-function AppLogos() {
+function AppLogos({ className }) {
   const androidStore = "";
   const iosStore = "";
 
   return (
-    <div>
+    <div className={className}>
       <a href={iosStore} target="_blank" rel={LINK_REL}>
         <img src={imgAppleStore} alt="Apple Store" />
       </a>

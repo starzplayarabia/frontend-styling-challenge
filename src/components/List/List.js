@@ -1,5 +1,11 @@
 import React from "react";
-import { UlStyled, LiStyled, DlStyled, DtStyled, DdStyled } from "./styles/Styled";
+import {
+  UlStyled,
+  LiStyled,
+  DlStyled,
+  DtStyled,
+  DdStyled
+} from "./styles/Styled";
 
 // TODO: Improve the generation dynamic tag using "as" prop added in styled-components v4
 const TypeList = {
@@ -7,10 +13,24 @@ const TypeList = {
   ul: UlStyled
 };
 
-const List = ({ className, data, type, size, color, display, separator }) => {
+const List = ({
+  className,
+  data,
+  type,
+  size,
+  color,
+  display,
+  separator,
+  link
+}) => {
   const ListComponent = TypeList[type || "ul"];
   return (
-    <ListComponent className={className} size={size} color={color} display={display}>
+    <ListComponent
+      className={className}
+      size={size}
+      color={color}
+      display={display}
+    >
       {type === "dl" || display === "block"
         ? Object.keys(data).map(item => (
             <React.Fragment key={item}>
@@ -23,7 +43,17 @@ const List = ({ className, data, type, size, color, display, separator }) => {
           ))
         : Object.keys(data).map(item => (
             <LiStyled key={item} display={display}>
-              {data[item]}
+              {link ? (
+                <a
+                  href={data[item].url || ""}
+                  role={data[item].role || ""}
+                  title={data[item].title || ""}
+                >
+                  {data[item].text || ""}
+                </a>
+              ) : (
+                data[item]
+              )}
             </LiStyled>
           ))}
     </ListComponent>
